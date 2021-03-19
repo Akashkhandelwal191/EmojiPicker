@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Picker</title>
+    <link rel="icon" href="images/emoji.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="Css/all.css">
+    <link rel="stylesheet" href="Css/style.css">
+
+    <style>
+        body {
+            background-color: black;
+            position: relative;
+
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+            background-color: #130f40;
+            height: 180px;
+            padding: 10px;
+        }
+
+        .main-content {
+            margin-top: 50px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        nav {
+            position: absolute;
+            border-radius: 0;
+            padding: 0 10px;
+        }
+
+        .show {
+
+            letter-spacing: 0.3rem;
+            height: 250px;
+            width: 80%;
+            display: grid;
+            place-items: center;
+
+        }
+
+        .show h3 {
+            font-size: 7rem;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .show p {
+            font-size: 2rem;
+            color: antiquewhite;
+        }
+
+        .form23 {
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+
+
+
+        #cover2 {
+
+
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: hsla(339, 100%, 55%, 1);
+
+            background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+
+            background: -moz-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+
+            background: -webkit-linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#FF1B6B", endColorstr="#45CAFF", GradientType=1);
+            z-index: 999;
+
+
+
+
+
+        }
+
+        #cover2 h1 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 14rem;
+        }
+
+        #cover2 h2 {
+
+            position: absolute;
+            top: 56%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-style: dashed;
+        }
+
+        #cover2 h3 {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+
+        }
+
+        .coverArea2 {
+            display: none;
+        }
+
+        @media screen and (max-width:466px) {
+
+            .show h3 {
+                font-size: 5rem;
+            }
+
+            .show p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coverArea2" id="cover2">
+
+        <h1>&#128512</h1>
+        <h2>COPIED!!</h2>
+        <h3>#128512</h3>
+    </div>
+
+    <div class="main">
+        <h1 class="colorchange">Emoji-Picker</h1>
+
+    </div>
+
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="Page1.html">Home</a></li>
+            <li class="breadcrumb-item active">Search</li>
+        </ol>
+    </nav>
+
+
+
+
+
+    <div class="main-content">
+
+        <form class="d-flex form23">
+            <i class="fas fa-search search" id="searchbtn"></i>
+            <input class="form-control " id="searchtxt" type="search"
+                placeholder="Search by name or Code or Paste a Character" aria-label="Search">
+
+        </form>
+
+    </div>
+
+    <div class="container-fluid my-4 show" id="ShowArea">
+
+        <!-- <h3>&#128512</h3>
+        <p>Akashkhandelwal191</p>
+        <p>#128512</p> -->
+
+    </div>
+
+    <div class="hide">
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128512" name="GRINNING FACE" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="GRINNING FACE #128512" onclick="move(this.id)">&#128512</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128513" name="GRINNING FACE WITH SMILING EYES" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="GRINNING FACE WITH SMILING EYES #128513" onclick="move(this.id)">&#128513</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128514" data-bs-toggle="tooltip" data-bs-placement="top" title="FACE WITH TEARS OF JOY #128514"
+                    onclick="move(this.id)">&#128514</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128515" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="SMILING FACE WITH OPEN MOUTH #128515" onclick="move(this.id)">&#128515</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128516" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="SMILING FACE WITH OPEN MOUTH AND SMILING EYES #128516" onclick="move(this.id)">&#128516</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128517" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="SMILING FACE WITH OPEN MOUTH AND COLD SWEAT #128517" onclick="move(this.id)">&#128517</h2>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128518" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128518</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128519" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128519</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128520" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128520</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128521" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128521</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128522" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128522</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128523" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128523</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128524" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128524</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128525" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128525</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128526" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128526</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128527" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128527</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128528" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128528</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128529" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128529</h2>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128530" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128530</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128531" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128531</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128532" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128532</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128533" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128533</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128534" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128534</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128535" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128535</h2>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128536" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128536</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128537" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128537</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128538" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128538</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128539" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128539</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128540" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128540</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128541" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128541</h2>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128542" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128542</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128543" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128543</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128544" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128544</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128545" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128545</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128546" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128546</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128547" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128547</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128548" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128548</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128549" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128549</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128550" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128550</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128551" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128551</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128552" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128552</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128553" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128553</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128554" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128554</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128555" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128555</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128556" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128556</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128557" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128557</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128558" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128558</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128559" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128559</h2>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128560" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128560</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128561" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128561</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128562" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128562</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128563" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128563</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128564" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128564</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128565" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128565</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128566" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128566</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128567" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128567</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128577" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128577</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128578" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128578</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128579" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128579</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#128580" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#128580</h2>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129296" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129296</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129297" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129297</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129298" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129298</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129299" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129299</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129300" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129301</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129301" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129301</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129302" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129302</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129303" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129303</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129304" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129304</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129305" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129305</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129306" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129306</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129307" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129307</h2>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129308" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129308</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129309" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129309</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129310" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129310</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129311" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129311</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129312" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129312</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129313" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129313</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129314" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129314</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129315" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129315</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129316" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129316</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129317" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129317</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129317" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129317</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129318" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129318</h2>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129319" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129319</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129320" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129320</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129321" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129321</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129322" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129322</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129323" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129323</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129324" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129324</h2>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129325" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129325</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129326" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129326</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129327" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129327</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129328" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129328</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129329" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129329</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129330" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129330</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129331" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129331</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129332" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129332</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129333" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129333</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129334" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129334</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129335" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129336</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129337" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129337</h2>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129338" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129338</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129339" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129339</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129340" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129340</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129341" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129341</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129342" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129342</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129343" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129343</h2>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129344" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129344</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129345" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129345</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129346" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129346</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129347" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129347</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129348" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129348</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129349" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129349</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129350" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129362</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129351" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129351</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129352" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129352</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129353" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129353</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129354" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129354</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129355" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129355</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129356" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129356</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129357" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129357</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129358" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129358</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129359" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129359</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129360" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129360</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129361" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129361</h2>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129363" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129363</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129364" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129364</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129365" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129365</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129366" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129366</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129367" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129367</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129368" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129368</h2>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129369" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129369</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129370" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129370</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129371" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129371</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129372" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129372</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129373" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129373</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129374" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129374</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129375" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129375</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129376" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129376</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129377" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129377</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129378" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129378</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129379" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129379</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129380" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129380</h2>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129381" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129381</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129382" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129382</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129383" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129383</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129384" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129384</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129385" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129386</h2>
+            </div>
+            <div class="col-md-2 col-sm-2  col-4 column">
+                <h2 id="#129387" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"
+                    onclick="move(this.id)">&#129387</h2>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="center">
+            <h5>Copyright &copy; Emoji-Picker. All rights reserved!</h5>
+            <h5>Created By Akash Khandelwal</h5>
+            <div class="footer-inner">
+                <h5>Connect With Me</h5>
+
+                <ul>
+                    <li><a href="https://twitter.com/skykhandelwal26" target="newtab"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/akash-khandelwal-5b09531aa" target="newtab"><i
+                                class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/Akashkhandelwal191" target="newtab"><i
+                                class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/skykhandelwal1999" target="newtab"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://m.facebook.com/akash.khandelwal.1042?ref=bookmarks" target="newtab"><i
+                                class="fab fa-facebook"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+
+        //To search a HTML CODE
+        searchbtn = document.getElementById('searchbtn');
+        searchbtn.addEventListener("click", function () {
+            var k = 0;
+            let search = document.getElementById('searchtxt');
+            let ShowArea = document.getElementById('ShowArea');
+            let inputVal = search.value.toUpperCase();
+
+            let row = document.getElementsByClassName('row');
+
+            for (let i = 0; i < row.length; i++) {
+                let column = row[i].getElementsByClassName('column');
+                for (let j = 0; j < column.length; j++) {
+                    let check = column[j].getElementsByTagName('h2')[0].getAttribute('id');
+                    if (inputVal === check) {
+                        k++;
+                        console.log("true");
+                        let check2 = "&" + check;
+                        ShowArea.innerHTML = `<h3 id="${check}"  onclick="move(this.id)"> ${check2}</h3>
+                                        <p> ${check}</p>`;
+                        break;
+
+                    }
+                }
+
+
+            }
+
+            if (k == 0) {
+                ShowArea.innerHTML = `<p>No Result Found </p>`;
+            }
+
+
+
+
+        })
+
+    </script>
+
+    <script>
+
+        var audio = new Audio("sound.mp3");
+
+        function move(id1) {
+            let inputElement = document.createElement('input');
+            inputElement.setAttribute('value', "&" + id1);
+            document.body.appendChild(inputElement);
+            inputElement.select();
+
+            document.execCommand('copy');
+            inputElement.parentNode.removeChild(inputElement);
+            let face = "&" + id1;
+            window.scrollTo(0, 0);
+            let cover = document.getElementById('cover2');
+            cover.innerHTML = `<h1 id="face">${face}</h1>
+                      <h2>COPIED!!</h2>
+                      <h3>${id1}</h3>`;
+            document.body.style.overflow = "hidden";
+            cover.classList.remove('coverArea2');
+            audio.play();
+            setTimeout(() => {
+
+                location.reload();
+            }, 3000)
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
